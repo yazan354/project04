@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">Personal Portfolio</title>
+    <link rel="stylesheet" href="style02.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo" data-i18n="logo">MyPortfolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="navAbout">About</a></li>
+                <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
+                <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+                <li><a href="#hobbies" data-i18n="navHobbies">Hobbies</a></li>
+                <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-buttons">
+            <button id="lang-toggle" class="btn-control">عربي / EN</button>
+            <button id="theme-toggle" class="btn-control" data-i18n="themeBtn">Toggle Theme</button>
+        </div>
+    </header>
+    <section id="about" class="section">
+        <div class="about-container">
+            <div class="profile-wrapper">
+                <div class="profile-img-container">
+                    <img id="profile-img" src="" alt="No Photo" class="profile-img">
+                    <span id="placeholder-text" class="avatar-placeholder" data-i18n="photoPlaceholder">Profile Photo</span>
+                </div>
+                <button id="switch-photo-btn" class="btn-action" data-i18n="loadPhotoBtn">Change Photo</button>
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="aboutTitle">About Me</h2>
+                <p data-i18n="aboutDesc">Hello! I am a passionate web developer learning to build responsive, accessible, and dynamic web applications from scratch using pure HTML5, CSS3, and JavaScript ES6+.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section id="skills" class="section">
+        <h2 data-i18n="skillsTitle">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-i18n="skill1">HTML5 Semantic Structure</div>
+            <div class="skill-card" data-i18n="skill2">CSS3 Layouts & Flexbox</div>
+            <div class="skill-card" data-i18n="skill3">JavaScript ES6+ & DOM</div>
+            <div class="skill-card" data-i18n="skill4">Git & GitHub Workflow</div>
+            <div class="skill-card" data-i18n="skill5">Unix Terminal & Bash</div>
+            <div class="skill-card" data-i18n="skill6">Responsive Web Design</div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="section">
+        <h2 data-i18n="projectsTitle">Project Showcase</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 data-i18n="proj1Title">Project 00</h3>
+                <p data-i18n="proj1Desc">Shell scripting and file management automation exercises in Unix environment.</p>
+            </div>
+            <div class="project-card">
+                <h3 data-i18n="proj2Title">Project 01</h3>
+                <p data-i18n="proj2Desc">Git repository configuration, SSH keys setup, and remote version control workflow.</p>
+            </div>
+            <div class="project-card">
+                <h3 data-i18n="proj3Title">Project 02</h3>
+                <p data-i18n="proj3Desc">Pure CSS geometric shape rendering and custom responsive layout design.</p>
+            </div>
+            <div class="project-card">
+                <h3 data-i18n="proj4Title">Project 03</h3>
+                <p data-i18n="proj4Desc">Interactive DOM manipulation, event handling, and dynamic task manager web application.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <h2 data-i18n="hobbiesTitle">Hobbies & Interests</h2>
+        <ul class="hobbies-list">
+            <li data-i18n="hobby1">💻 Coding & Building Problem-Solving Projects</li>
+            <li data-i18n="hobby2">📚 Exploring Web Development Best Practices</li>
+            <li data-i18n="hobby3">🔒 Cybersecurity & Network Architecture Principles</li>
+            <li data-i18n="hobby4">🎮 Tech Exploration & Digital Creation</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section">
+        <h2 data-i18n="contactTitle">Contact Me</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert(currentLang === 'ar' ? 'شكراً لك! تم إرسال رسالتك بنجاح.' : 'Thank you! Your message has been sent successfully.');">
+            <div class="form-group">
+                <label for="name" data-i18n="labelName">Name:</label>
+                <input type="text" id="name" required data-i18n-placeholder="placeholderName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email" data-i18n="labelEmail">Email:</label>
+                <input type="email" id="email" required data-i18n-placeholder="placeholderEmail" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message" data-i18n="labelMessage">Message:</label>
+                <textarea id="message" rows="4" required data-i18n-placeholder="placeholderMessage" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" data-i18n="submitBtn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-i18n="footerText">&copy; 2026 Crafted with precision and pride. Built without frameworks.</p>
+    </footer>
+
+    <script src="script02.js"></script>
+</body>
+</html>
